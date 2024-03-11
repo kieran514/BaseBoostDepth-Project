@@ -13,7 +13,7 @@ body {
     margin-bottom: 5px;
 }
 
-.dnerf {
+.methodname {
   font-variant: small-caps;
 }
 
@@ -112,26 +112,51 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  width: 100%;
 }
 
-.results-carousel .item {
-  margin: 5px;
-  overflow: hidden;
-  padding: 20px;
-  font-size: 0;
+.results-carousel .twoitem {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    margin: 5px;
+    overflow: hidden;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    padding: 0;
+    font-size: 0;
 }
 
-.results-carousel video {
-  margin: 0;
+.slider-navigation-previous {
+    top: 47.5%;
+    margin-top: -15px;
+    left: calc(0% + 15px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
 }
 
+.slider-navigation-next {
+    top: 47.5%;
+    margin-top: -15px;
+    left: calc(100% - 15px - 42px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 1);
+}
+
+.slider-pagination {
+    top: calc(100% - 22px);
+}
 .slider-pagination .slider-page {
-  background: #000000;
+    background-color: #FFF;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 1);
 }
 
-.eql-cntrb { 
-  font-size: smaller;
+.selectable{
+    -webkit-touch-callout: all; /* iOS Safari */
+    -webkit-user-select: all; /* Safari */
+    -khtml-user-select: all; /* Konqueror HTML */
+    -moz-user-select: all; /* Firefox */
+    -ms-user-select: all; /* Internet Explorer/Edge */
+    user-select: all; /* Chrome and Opera */
 }
-
-
-
