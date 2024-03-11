@@ -4,22 +4,22 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Page for Robust-Depth">
-  <meta property="og:title" content="Robust-Depth"/>
-  <meta property="og:description" content="Self-supervised Monocular Depth Estimation: Let’s Talk About The Weather"/>
+  <meta name="description" content="Page for BaseBoostDepth">
+  <meta property="og:title" content="BaseBoostDepth"/>
+  <meta property="og:description" content="BaseBoostDepth: Exploiting Larger Baselines for Self-Supervised Monocular Depth Estimation"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/Figure_1_variants-Page-5.jpeg" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
-  <meta name="twitter:title" content="Robust-Depth">
-  <meta name="twitter:description" content="Self-supervised Monocular Depth Estimation: Let’s Talk About The Weather">
+  <meta name="twitter:title" content="BaseBoostDepth">
+  <meta name="twitter:description" content="BaseBoostDepth: Exploiting Larger Baselines for Self-Supervised Monocular Depth Estimation">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/Figure_1_variants-Page-5.jpeg">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="ICCV, Robust-Depth, Depth estimation, self-supervision">
+  <meta name="keywords" content="BaseBoostDepth, Depth estimation, self-supervision, Wide Baselines, Depth Edges">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -54,20 +54,20 @@
               <img src='static/images/brands.png' alt='Aston-Aurrigo' width='1000px' height='600px'> 
             </div> 
             
-            <div class='ICCV'> 
+<!--             <div class='ICCV'> 
               <img src='static/images/ICCV.png' alt='ICCV' width='500px' height='150px'> 
-            </div> 
+            </div>  -->
 
-            <h1 class="title is-1 publication-title">Self-supervised Monocular Depth Estimation: Let's Talk About The Weather</h1>
+            <h1 class="title is-1 publication-title">BaseBoostDepth: Exploiting Larger Baselines for Self-Supervised Monocular Depth Estimation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://kieran514.github.io/" target="_blank">Kieran Saunders</a><sup>1</sup>,</span>
                 <span class="author-block">
-                  <a href="https://george-vogiatzis.org/" target="_blank">George Vogiatzis</a><sup>2</sup>,</span>
-                  <span class="author-block">
                     <a href="https://ljmanso.com/" target="_blank">Luis Manso</a><sup>1</sup>
-                  </span>
+                </span>
+                <span class="author-block">
+                  <a href="https://george-vogiatzis.org/" target="_blank">George Vogiatzis</a><sup>2</sup>,</span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
@@ -81,7 +81,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/kieran514/Robust-Depth" target="_blank"
+                    <a href="https://github.com/kieran514/baseboostdepth" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -91,7 +91,7 @@
                 </span>
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2307.08357" target="_blank"
+                  <a href="https://arxiv.org/abs/" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -100,7 +100,7 @@
                 </a>
               </span>
                       
-                <span class="link-block">
+<!--                 <span class="link-block">
                   <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Saunders_Self-supervised_Monocular_Depth_Estimation_Lets_Talk_About_The_Weather_ICCV_2023_paper.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -108,7 +108,7 @@
                   </span>
                   <span>CVF</span>
                 </a>
-              </span>
+              </span> -->
 
                       
             </div>
@@ -121,7 +121,7 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
@@ -134,7 +134,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -145,7 +145,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Current, self-supervised depth estimation architectures rely on clear and sunny weather scenes to train deep neural networks. However, in many locations, this assumption is too strong. For example in the UK (2021), 149 days consisted of rain. For these architectures to be effective in real-world applications, we must create models that can generalise to all weather conditions, times of the day and image qualities. Using a combination of computer graphics and generative models, one can augment existing sunny-weather data in a variety of ways that simulate adverse weather effects. While it is tempting to use such data augmentations for self-supervised depth, in the past this was shown to degrade performance instead of improving it. In this paper, we put forward a method that uses augmentations to remedy this problem. By exploiting the correspondence between unaugmented and augmented data we introduce a pseudo-supervised loss for both depth and pose estimation. This brings back some of the benefits of supervised learning while still not requiring any labels. We also make a series of practical recommendations which collectively offer a reliable, efficient framework for weather-related augmentation of self-supervised depth from monocular video. We present extensive testing to show that our method, Robust-Depth, achieves SotA performance on the KITTI dataset while significantly surpassing SotA on challenging, adverse condition data such as DrivingStereo, Foggy CityScape and NuScenes-Night.
+            In the domain of multi-baseline stereo, the conventional understanding is that, in general, increasing baseline separation substantially enhances the accuracy of depth estimation. However, prevailing self-supervised depth estimation architectures primarily use minimal frame separation and a constrained stereo baseline. Larger frame separations can be employed; however, we show this to result in diminished depth quality due to various factors, including significant changes in brightness, and increased areas of occlusion. In response to these challenges, our proposed method, \textbf{BaseBoostDepth}, incorporates a curriculum learning-inspired warm-up and boosting optimization strategy to effectively leverage larger frame separations. However, we show that our optimization strategy alone does not suffice, as larger baselines still cause pose estimation drifts, yet they paradoxically enhance foreground detail in the depth network. Leveraging this phenomenon, we introduce partial incremental pose and artificial pose reconstructions, significantly improving all metrics. Furthermore, our boosting phase offers training flexibility; it can be initialized either from the warm-up phase or with pre-trained weights. Ultimately, our final depth network achieves state-of-the-art performance on KITTI and SYNS-patches datasets across image-based, edge-based, and point cloud-based metrics.
           </p>
         </div>
       </div>
