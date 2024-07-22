@@ -118,20 +118,20 @@
 
 
 <!-- Teaser video-->
-<!-- <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-<!--         <source src="static/videos/Robust-Depth.mp4"
+        <source src="static/videos/teaser.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-      We demonstrate the lack of robustness from previous methods, and the improvements of Robust-Depth, independent of the depth network architecture.
+      We demonstrate significant edge-based depth improvemetns over previous state of the art.
       </h2>
     </div>
   </div>
-</section> --> 
+</section>
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -142,8 +142,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In the domain of multi-baseline stereo, the conventional understanding is that, in general, increasing baseline separation substantially enhances the accuracy of depth estimation. However, prevailing self-supervised depth estimation architectures primarily use minimal frame separation and a constrained stereo baseline. Larger frame separations can be employed; however, we show this to result in diminished depth quality due to various factors, including significant changes in brightness, and increased areas of occlusion. In response to these challenges, our proposed method, BaseBoostDepth, incorporates a curriculum learning-inspired warm-up and boosting optimization strategy to effectively leverage larger frame separations. However, we show that our optimization strategy alone does not suffice, as larger baselines still cause pose estimation drifts, yet they paradoxically enhance foreground detail in the depth network. Leveraging this phenomenon, we introduce partial incremental pose and artificial pose reconstructions, significantly improving all metrics. Furthermore, our boosting phase offers training flexibility; it can be initialized either from the warm-up phase or with pre-trained weights. Ultimately, our final depth network achieves state-of-the-art performance on KITTI and SYNS-patches datasets across image-based, edge-based, and point cloud-based metrics.
-          </p>
+            In the domain of multi-baseline stereo, the conventional understanding is that, in general, increasing baseline separation substantially enhances the accuracy of depth estimation. However, prevailing self-supervised depth estimation architectures primarily use minimal frame separation and a constrained stereo baseline. Larger frame separations can be employed; however, we show this to result in diminished depth quality due to various factors, including significant changes in brightness, and increased areas of occlusion. In response to these challenges, our proposed method, \textbf{BaseBoostDepth}, incorporates a curriculum learning-inspired optimization strategy to effectively leverage larger frame separations. However, we show that our curriculum learning-inspired strategy alone does not suffice, as larger baselines still cause pose estimation drifts. Therefore, we introduce incremental pose estimation to enhance the accuracy of pose estimations, resulting in significant improvements across all depth metrics. Additionally, to improve the robustness of the model, we introduce error-induced reconstructions, which optimize reconstructions with added error to the pose estimations. Ultimately, our final depth network achieves state-of-the-art performance on KITTI and SYNS-patches datasets across image-based, edge-based, and point cloud-based metrics without increasing computational complexity at test time.          </p>
         </div>
       </div>
     </div>
